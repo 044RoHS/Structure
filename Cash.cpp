@@ -10,27 +10,32 @@ struct Bank
 
 }; 
 
-int invoiceBank() 
+void invoiceBank(Bank* b, int* a) 
 {
-    Bank bank;
-    Bank* P_bank = &bank;
-    std::cout << "Введите номер счёта: ";
-    std::cin >> P_bank->NUmberczet;
-    std::cout << "Введите имя владельца: ";
-    std::cin >> P_bank->Name;
-    std::cout << "Введите баланс: ";
-    std::cin >> P_bank->Money;
-    std::cout << "Введите новый баланс: ";
-    std::cin >> P_bank->Money;
-    std::cout << "Ваш счёт: " << P_bank->NUmberczet << ", " << P_bank->Name << ", " << P_bank->Money;
+    b->NUmberczet;
+    b->Name;
+    b->Money;
+    int Money = *a;
+  
+   
 }
 
 
 int main()
 {
     setlocale(LC_ALL, "Ru");
-    invoiceBank();
-  
+    int NewMoney;
+    Bank bank;
+    std::cout << "Введите номер счёта: ";
+    std::cin >> bank.NUmberczet;
+    std::cout << "Введите имя владельца: ";
+    std::cin >> bank.Name;
+    std::cout << "Введите баланс: ";
+    std::cin >>bank.Money;
+    std::cout << "Введите новый баланс: ";
+    std::cin >>  NewMoney;
+    invoiceBank(&bank,&NewMoney);
+    std::cout << "Ваш счёт: " << bank.NUmberczet << ", " << bank.Name << ", " << NewMoney;
 
 }
 
